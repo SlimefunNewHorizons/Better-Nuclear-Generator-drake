@@ -9,7 +9,7 @@
 
     <properties>
 
-        <java.version>21</java.version>
+        <java.version>25</java.version>
         <maven.compiler.release>${java.version}</maven.compiler.release>
 
         <paper.version>1.21.11-R0.1-SNAPSHOT</paper.version>
@@ -36,8 +36,6 @@
         <httpcore5.version>5.4.3</httpcore5.version>
         <httpclient5.version>5.6.3</httpclient5.version>
         <maven.deploy.skip>false</maven.deploy.skip>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -311,6 +309,17 @@
                 </includes>
             </resource>
         </resources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <release>${maven.compiler.release}</release>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
     <dependencies>
