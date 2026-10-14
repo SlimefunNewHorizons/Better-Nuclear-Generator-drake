@@ -1,7 +1,6 @@
 package me.CAPS123987.BetterNuclearReactor;
 
 
-import com.github.drakescraft_labs.labupdate.DrakesLabsReleaseUpdate;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -36,7 +35,6 @@ public class BetterNuclearReactor extends JavaPlugin implements SlimefunAddon {
 	
     @Override
     public void onEnable() {
-        DrakesLabsReleaseUpdate.schedule(this, "BetterNuclearReactor-drake");
 
         // Read something from your config.yml
         Config cfg = new Config(this);
